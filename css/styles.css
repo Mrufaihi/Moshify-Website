@@ -1,14 +1,63 @@
-:root{
-    /* root vars to set for whole project */
-    --color-primary: #06A4F7;   
-    --color-secondary: #06EFF7;
-    --color-accent: #F75906; 
-    --color-header: #403066;
-    --color-body: #918ca4;
+/* APPLICATION LEVEL */
+:root {
+  /* root vars to set for whole project */
+  --color-primary: #06a4f7;
+  --color-secondary: #06eff7;
+  --color-accent: #f75906;
+  --color-header: #403066;
+  --color-body: #918ca4;
 }
 
-html{
-    font-size: 62.5%;
+html {
+  /* 10px */
+  font-size: 62.5%;
 }
-body{
-} 
+body {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  color: var(--color-body);
+  font-size: 2.4rem;
+  line-height: 1.5;
+}
+
+/* FONTS */
+
+h1,
+h2,
+h3 {
+  color: var(--color-header);
+  /* margin is 20px, but font adds some margin so 1rem is better here */
+  margin-bottom: 1rem;
+}
+
+h1 {
+  /* h1 70px */
+  font-size: 7rem;
+}
+h2 {
+  /* 40px */
+  font-size: 4rem;
+}
+h3 {
+  /* 30px */
+  font-size: 3rem;
+}
+p {
+  /* margin collapse fix */
+  margin-top: 0;
+}
+
+/* for latops */
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+  h1 {
+    font-size: 8rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 2.4rem;
+  }
+}
