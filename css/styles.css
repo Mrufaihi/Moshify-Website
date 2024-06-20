@@ -17,6 +17,7 @@ html {
 body {
   font-family: Inter, Arial, Helvetica, sans-serif;
   color: var(--color-body);
+  /* 24px body */
   font-size: 2.4rem;
   line-height: 1.5;
 }
@@ -118,5 +119,33 @@ a {
   }
   .badge--small {
     font-size: 1.2rem;
+  }
+}
+
+/* LISTS */
+/* start with most general css */
+.list {
+  list-style: none;
+  padding-left: 0;
+  color: var(--color-header);
+}
+.list--inline .list__item {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.list--tick {
+  /* font-size: 3rem; */
+  text-transform: capitalize;
+  list-style-image: url(/images/tick.svg);
+  padding-left: 3rem;
+}
+.list--tick .list__item {
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .list--tick .list__item {
+    padding-left: 0.1rem;
   }
 }
