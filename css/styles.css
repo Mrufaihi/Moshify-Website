@@ -1,3 +1,14 @@
+:root{
+    /* root vars to set for whole project */
+    --color-primary: #06A4F7;   
+    --color-secondary: #06EFF7;
+    --color-accent: #F75906; 
+    --color-header: #403066;
+    --color-body: #918ca4;
+}
+
 html{
     font-size: 62.5%;
 }
+body{
+} 
