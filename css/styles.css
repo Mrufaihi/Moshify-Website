@@ -1,11 +1,18 @@
 /* APPLICATION LEVEL */
 :root {
   /* root vars to set for whole project */
-  --color-primary: #06a4f7;
+  --color-primary: #0672f7;
   --color-secondary: #06eff7;
   --color-accent: #f75906;
   --color-header: #403066;
   --color-body: #918ca4;
+}
+
+/* for box-sizing getting out of screen (anchors) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 /* TYPOGRAPHY */
@@ -66,6 +73,7 @@ p {
 }
 
 /* LINKS */
+
 a {
   text-decoration: none;
 }
@@ -98,6 +106,7 @@ a {
   font-size: 2rem;
   font-weight: 600;
   padding: 1rem;
+  white-space: nowrap;
 }
 
 /* skinclass */
@@ -123,6 +132,7 @@ a {
 }
 
 /* LISTS */
+
 /* start with most general css */
 .list {
   list-style: none;
@@ -171,4 +181,71 @@ a {
   background-color: #f3f9fa;
 }
 
-/*  */
+/* BUTTONS */
+
+/* button structure */
+.button {
+  border-radius: 30px;
+  border: none;
+  /* make btn look clickable */
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 2rem;
+  text-transform: uppercase;
+  /* incase no space in line */
+  white-space: nowrap;
+  /* margin: 1rem 0; */
+  /* for anchors */
+  display: inline-block;
+  text-align: center;
+  /* and we did box-sizing for all */
+}
+
+/* button skins */
+.button--primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+.button--primary:hover {
+  background-color: #2b88fa;
+}
+.button--secondary {
+  background-color: var(--color-secondary);
+  color: white;
+}
+.button--secondary:hover {
+  background-color: #39f1f7;
+}
+.button--accent {
+  display: inline-block;
+  color: white;
+  background-color: var(--color-accent);
+}
+.button--accent:hover {
+  background-color: #f3732e;
+}
+/* for no-outline skin */
+.button--outline {
+  color: var(--color-header);
+  outline: var(--color-header);
+  background-color: transparent;
+  border: 2px solid var(--color-header);
+}
+.button--outline:hover {
+  background-color: var(--color-header);
+  color: white;
+  transition: 0.3s;
+}
+/* button block attribute */
+.button--block {
+  width: 100%;
+}
+/* for desktop */
+@media screen and (min-width: 1024px) {
+  .button {
+    font-size: 1.5rem;
+  }
+}
+
+/* INPUTS */
