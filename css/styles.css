@@ -6,6 +6,8 @@
   --color-accent: #f75906;
   --color-header: #403066;
   --color-body: #918ca4;
+  --border-radius: 30px;
+  --border-color: lightgray;
 }
 
 /* for box-sizing getting out of screen (anchors) */
@@ -249,3 +251,36 @@ a {
 }
 
 /* INPUTS */
+
+/* standalone input */
+.input {
+  border: 2px solid var(--border-color);
+  padding: 1rem;
+  outline: 0;
+  text-overflow: ellipsis;
+  border-radius: var(--border-radius);
+}
+::placeholder {
+  color: var(--color-body);
+  text-transform: capitalize;
+}
+
+.input-group {
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  display: flex;
+  box-shadow: 0 0 10px 10px var(--border-color);
+}
+.input-group .input {
+  border: 0;
+  padding: 2rem 2rem;
+  flex-grow: 1;
+}
+.input-group .button {
+  margin: 4px;
+}
+.input-group .icon-container {
+  margin: 4px;
+}
+
+/*  */
