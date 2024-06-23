@@ -107,7 +107,7 @@ a {
   border-radius: 20px;
   font-size: 2rem;
   font-weight: 600;
-  padding: 1rem;
+  padding: 0.5rem;
   white-space: nowrap;
 }
 
@@ -147,9 +147,10 @@ a {
 }
 .list--tick {
   /* font-size: 3rem; */
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   list-style-image: url(/images/tick.svg);
   padding-left: 3rem;
+  text-transform: capitalize;
 }
 .list--tick .list__item {
   padding-left: 1rem;
@@ -281,6 +282,103 @@ a {
 }
 .input-group .icon-container {
   margin: 4px;
+}
+
+/* CARDS */
+
+.card {
+  /* remove margin */
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 15px #f5f5f5;
+  overflow: hidden;
+  /* margin: 2rem; */
+}
+/* header */
+.card__header {
+  font-size: 1.5rem;
+  padding: 2rem;
+  text-transform: capitalize;
+}
+.card--primary .card__header {
+  background-color: var(--color-primary);
+  color: white;
+}
+.card--secondary .card__header {
+  background-color: var(--color-secondary);
+  color: white;
+}
+.header__title {
+  display: block;
+  color: white;
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+.header__price {
+  font-size: 4rem;
+}
+.header__payment-cycle {
+  font-weight: 300;
+  opacity: 80%;
+  text-transform: lowercase;
+}
+.card--primary .badge--primary {
+  background-color: #0656f7;
+}
+.card--secondary .badge--secondary {
+  background-color: #06dff7;
+}
+.card__header .badge {
+  margin: 1rem;
+}
+.header__description {
+  display: block;
+  word-spacing: 1px;
+  /* opacity: 50%; */
+}
+/* body */
+.card__body {
+  padding: 1rem 3rem 2rem;
+}
+.card__body .list__item {
+  /*  using -1rem  */
+  margin: 0.5rem -1rem 1.8rem;
+  color: var(--color-header);
+  font-weight: 500;
+  word-spacing: 1px;
+}
+.card__body .button {
+  /*  */
+  margin: 1rem 0rem 1.7rem;
+  padding: 1.7rem;
+  font-size: 1.4rem;
+}
+.card--popular .card__header::before {
+  content: url(/images/popular.svg);
+  width: 40px;
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  right: 5%;
+}
+/* make parent relative for absolute */
+.card--popular .card__header {
+  position: relative;
+}
+/* for desktop */
+@media screen and (min-width: 1024px) {
+  .header__title {
+    font-size: 1.8rem;
+  }
+  .header__description {
+    font-size: 1.3rem;
+  }
+  .header__price {
+    font-size: 3.5rem;
+  }
+  .card__body .button {
+    font-size: 1.2rem;
+  }
 }
 
 /*  */
