@@ -381,4 +381,23 @@ a {
   }
 }
 
-/*  */
+/* Media */
+
+.media {
+  display: flex;
+}
+.media__image {
+  margin: 1.5rem 0;
+}
+.media__body {
+  margin: 0rem 2rem;
+}
+.media__body .body__title {
+  text-transform: capitalize;
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+}
+.media__body .body__description {
+  margin-top: 0;
+}
+/* @media? */
