@@ -170,8 +170,15 @@ a {
   width: 40px;
   height: 40px;
 }
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
 .icon--primary {
   fill: var(--color-primary);
+}
+.icon--white {
+  fill: white;
 }
 .icon-container {
   /* we need inline too, for same line icons and text */
@@ -181,8 +188,13 @@ a {
   align-items: center;
   width: 64px;
   height: 64px;
-  border-radius: 50px;
+  border-radius: 100%;
+  /* skin here just for default */
   background-color: #f3f9fa;
+}
+/* icon-container skins: */
+.icon-container--accent {
+  background-color: var(--color-accent);
 }
 
 /* BUTTONS */
@@ -288,14 +300,11 @@ a {
 /* CARDS */
 
 .card {
-  /* remove margin */
   border: 1px solid var(--border-color);
   border-radius: 10px;
   box-shadow: 0 0 10px 15px #f5f5f5;
   overflow: hidden;
-  /* margin: 2rem; */
 }
-/* header */
 .card__header {
   font-size: 1.5rem;
   padding: 2rem;
@@ -309,6 +318,13 @@ a {
   background-color: var(--color-secondary);
   color: white;
 }
+.card__body {
+  padding: 1rem 3rem 2rem;
+}
+
+/* PLANS */
+
+/* header */
 .header__title {
   display: block;
   color: white;
@@ -338,9 +354,6 @@ a {
   /* opacity: 50%; */
 }
 /* body */
-.card__body {
-  padding: 1rem 3rem 2rem;
-}
 .card__body .list__item {
   /*  using -1rem  */
   margin: 0.5rem -1rem 1.8rem;
@@ -395,7 +408,8 @@ a {
 }
 .media__body .media__title {
   text-transform: capitalize;
-  margin: 0 0 0.5rem 0;
+  /* bottom was 0.5rem */
+  margin: 0 0 0rem 0;
   font-size: 2.5rem;
 }
 .media__body .media__text {
@@ -418,20 +432,21 @@ a {
 .quote__text::after {
   content: close-quote;
 }
-.quote__name .media {
+.quote__author .media {
   margin: 2rem;
 }
-.quote__name .quote__image {
+.quote__author .quote__icon {
   /* margin-top: 0.5rem; alternativly:- */
+  top: -15px;
   position: relative;
   bottom: 10px;
 }
-.quote__name .quote__author {
+.quote__author .author-name {
   font-size: 3.5rem;
   font-weight: 500;
   margin-bottom: 0rem;
 }
-.quote__name .quote__company {
+.quote__author .quote__company {
   opacity: 60%;
   font-size: 2rem;
 }
@@ -451,7 +466,8 @@ a {
 
 .grid {
   display: grid;
-  margin: 1rem;
+  /* margin: 1rem; */
+  justify-items: center;
 }
 /* for tabelets */
 @media screen and (min-width: 768px) {
@@ -467,3 +483,33 @@ a {
 }
 
 /* Testimonials */
+
+.testimonial {
+  padding: 3rem;
+  /* grid-gap: 4rem; */
+}
+.testimonial .grid {
+  grid-gap: 4rem;
+}
+.testimonial__image {
+  position: relative;
+  margin: 0 3rem;
+}
+.testimonial__image > img {
+  width: 100%;
+}
+.testimonial__image .icon-container {
+  /* dont add skins in structure | background-color: #f3732e; */
+  position: absolute;
+  top: 5%;
+  /* half of the icon width (64px) */
+  right: -32px;
+}
+.testimonial .quote__text {
+  font-size: 2.4rem;
+}
+/* for tablet */
+@media screen and (min-width: 768px) {
+}
+
+/* CALLOUTS */
