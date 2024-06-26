@@ -257,6 +257,9 @@ a {
 .button--block {
   width: 100%;
 }
+.button--stretch {
+  padding: 2rem 8rem;
+}
 /* for desktop */
 @media screen and (min-width: 1024px) {
   .button {
@@ -467,10 +470,12 @@ a {
 .grid {
   display: grid;
   /* margin: 1rem; */
-  justify-items: center;
+  /* justify-items: center;
+  align-items: center; */
 }
 /* for tabelets */
-@media screen and (min-width: 768px) {
+/* 900px for tablets looks better on CALLOUT */
+@media screen and (min-width: 900px) {
   .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -513,3 +518,38 @@ a {
 }
 
 /* CALLOUTS */
+
+.callout {
+  background: var(--color-primary);
+  padding: 1rem 2rem 6rem;
+  border-radius: 10px;
+}
+.callout__body {
+  text-align: center;
+}
+.callout__title {
+  color: #fff;
+}
+.callout__text {
+  color: #fff;
+}
+
+.callout .button {
+  /*not reusable if we want wider btns later:  padding: 2rem 8rem; */
+  justify-self: center;
+  align-self: center;
+  /* margin-bottom: 4rem; */
+}
+@media screen and (min-width: 900px) {
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr auto;
+    padding: 0 3rem;
+  }
+  .callout__body {
+    padding-left: 6rem;
+    text-align: start;
+  }
+  .callout .button {
+    margin: 4rem 0rem 0rem 6rem;
+  }
+}
