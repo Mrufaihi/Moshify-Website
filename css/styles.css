@@ -554,3 +554,40 @@ a {
     margin: 4rem 0rem 0rem 6rem;
   }
 }
+
+/* COLLAPSIBLES */
+
+.collapsible__header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+}
+.collapsible__heading {
+  margin-top: 0;
+}
+/* the defaults */
+.collapsible .icon-container {
+  /* background: gray; */
+}
+.collapsible__icon {
+  /* background: gray; */
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+}
+.collapsible--extended .collapsible__icon {
+  transform: rotate(0);
+  transition: transform 0.3s;
+}
+.collapsible__content {
+  /* display: none;| instead use max-height to be able to transition*/
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+/* the extended */
+.collapsible--extended .collapsible__content {
+  /* display: block; | instead use max-height to be able to transition*/
+  /* max-height enables element to grow to 100vh, but doesnt set its heigh to 100vh fixed */
+  max-height: 100vh;
+  transition: max-height 0.5s;
+}
