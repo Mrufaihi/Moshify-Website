@@ -567,10 +567,9 @@ a {
 }
 /* the defaults */
 .collapsible .icon-container {
-  /* background: gray; */
+  background: gray;
 }
 .collapsible__icon {
-  /* background: gray; */
   transform: rotate(-90deg);
   transition: transform 0.3s;
 }
@@ -582,12 +581,14 @@ a {
   /* display: none;| instead use max-height to be able to transition*/
   max-height: 0;
   overflow: hidden;
+  /* opacity: 0% */
+
   transition: max-height 0.5s;
 }
-/* the extended */
 .collapsible--extended .collapsible__content {
   /* display: block; | instead use max-height to be able to transition*/
   /* max-height enables element to grow to 100vh, but doesnt set its heigh to 100vh fixed */
   max-height: 100vh;
+  /* opacity: 100% */
   transition: max-height 0.5s;
 }
