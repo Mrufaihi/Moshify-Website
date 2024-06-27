@@ -582,7 +582,6 @@ a {
   max-height: 0;
   overflow: hidden;
   /* opacity: 0% */
-
   transition: max-height 0.5s;
 }
 .collapsible--extended .collapsible__content {
@@ -630,4 +629,73 @@ a {
 .block--skewed-left {
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
   padding-bottom: calc(var(--padding-vertical) + 4rem);
+}
+
+/* NAVIGATION BAR */
+
+.nav {
+  padding: 0 1rem;
+  background-color: #222;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.nav__toggler {
+  /* margin: 1rem 0; */
+  align-self: center;
+  opacity: 50%;
+  box-shadow: 0 0 5px 5px #444;
+  border-radius: 5px;
+  transition: opacity 0.5s, box-shadow 0.5s;
+  cursor: pointer;
+}
+.collapsible--extended .nav__toggler {
+  opacity: 100%;
+  box-shadow: none;
+  transition: all 0.5s;
+}
+.nav__toggler:hover {
+  opacity: 100%;
+}
+.nav__list {
+  /* set to 100% so it will wrap under nav bar, and then set invisible */
+  width: 100%;
+  margin: 0;
+}
+.nav__item {
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #666;
+  flex-direction: column;
+  opacity: 70%;
+  transition: opacity 0.5s;
+}
+.nav__item:hover {
+  opacity: 100%;
+  /* transition: opacity 0.5s; cant do that, hover needs parent to do transitioning */
+}
+
+.nav__item > a {
+  color: white;
+}
+/* @media */
+@media screen and (min-width: 768px) {
+  /* we want nav to be horizontally displayed. no toggler */
+  .nav {
+    flex-wrap: nowrap;
+  }
+  .nav__toggler {
+    display: none;
+  }
+  .nav__list {
+    display: flex;
+    /* by default direction is row */
+    width: auto;
+    /* to overwrite max-height= 0 by default, set by collapsible */
+    max-height: 100vh;
+  }
+  .nav__item {
+    border-bottom: 0;
+    padding: 2rem 3rem;
+    font-size: 1.4rem;
+  }
 }
