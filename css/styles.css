@@ -592,3 +592,42 @@ a {
   /* opacity: 100% */
   transition: max-height 0.5s;
 }
+
+/* BLOCKS */
+
+.block {
+  /* we set var padding vertical to dynamically change vertical padding for skew */
+  --padding-vertical: 6rem;
+  /* padding: 3rem 6rem; */
+  padding: var(--padding-vertical) 3rem;
+  /* text-align: center; */
+}
+.block__header {
+  text-align: center;
+}
+.block__heading {
+  margin: 1rem 0;
+}
+.container {
+  max-width: 1140px;
+  /* vertical 0, horizontal auto "middle" */
+  margin: 0 auto;
+}
+/* black block */
+.block--black {
+  background: #000;
+  color: gray;
+}
+.block--black .block__heading {
+  color: white;
+}
+/* skew */
+.block--skewed-right {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+  /* what ever the --padding-vertical is + 4rem on top of it */
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+}
+.block--skewed-left {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+}
