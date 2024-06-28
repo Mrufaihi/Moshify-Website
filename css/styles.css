@@ -3,7 +3,7 @@
   /* root vars to set for whole project */
   --color-primary: #0672f7;
   --color-secondary: #06eff7;
-  --color-accent: #f75906;
+  --color-accent: #fe4400;
   --color-header: #403066;
   --color-body: #918ca4;
   --color-body-darker: #595276;
@@ -40,6 +40,7 @@ h3 {
   color: var(--color-header);
   /* margin is 20px, but font adds some margin so 1rem is better here */
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
 h1 {
@@ -258,7 +259,7 @@ a {
   width: 100%;
 }
 .button--stretch {
-  padding: 2rem 8rem;
+  padding: 2rem 12rem;
 }
 /* for desktop */
 @media screen and (min-width: 1024px) {
@@ -622,13 +623,22 @@ a {
 }
 /* skew */
 .block--skewed-right {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
   /* what ever the --padding-vertical is + 4rem on top of it */
-  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  padding-bottom: calc(var(--padding-vertical) + 6rem);
 }
 .block--skewed-left {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
-  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+  padding-bottom: calc(var(--padding-vertical) + 6rem);
+}
+
+@media screen and (min-width: 900px) {
+  .block--skewed-right {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+  }
+  .block--skewed-left {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  }
 }
 
 /* NAVIGATION BAR */
@@ -699,3 +709,40 @@ a {
     font-size: 1.4rem;
   }
 }
+
+/* HERO */
+
+.hero__content {
+  /* text-align: center; |set at block__header*/
+}
+.hero__content .hero__heading {
+  text-shadow: 1px 1px 10px #666;
+}
+.hero__content .hero__text {
+  color: rgba(255, 255, 255, 0.644);
+  margin-bottom: 4rem;
+}
+
+.hero__image {
+  width: 100%;
+  margin: 0rem 0 4rem;
+}
+
+@media screen and (min-width: 900px) {
+  .hero__content {
+    text-align: start;
+    align-self: center;
+  }
+  .hero__text {
+    letter-spacing: 1px;
+    font-size: 2rem;
+  }
+  .hero__heading {
+    /* font-size: 6.5rem; */
+  }
+  .hero__button {
+    padding: 2rem 4rem;
+  }
+}
+
+/*  */
