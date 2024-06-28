@@ -1,6 +1,6 @@
 <div class="block block--black block--skewed-left hero">
   <div class="grid grid--1x2 container">
-    <!-- grid1 -->
+    <!-- hero content -->
     <div class="block__header hero__content">
       <h1 class="block__heading hero__heading">Cloud Hosting For Pros</h1>
       <p class="hero__text">Lorem ipsum dolor sit amet consectetur.</p>
@@ -8,7 +8,13 @@
         >Click here</a
       >
     </div>
-    <!-- grid2 -->
-    <span><img class="hero__image" src="/images/banner.png" alt="" /></span>
+    <!-- hero image(optimzied for retina) -->
+    <picture>
+      <source
+        type="image/webp"
+        srcset="images/banner@1x.webp 1x, images/banner@2x.webp 2x"
+      />
+      <img class="hero__image" src="images/banner.webp" alt="" />
+    </picture>
   </div>
 </div>
