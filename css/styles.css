@@ -106,10 +106,10 @@ a {
 
 /* structure class */
 .badge {
-  border-radius: 20px;
+  border-radius: 50px;
   font-size: 2rem;
   font-weight: 600;
-  padding: 0.5rem;
+  padding: 0.3rem 1rem;
   white-space: nowrap;
 }
 
@@ -206,7 +206,7 @@ a {
   border: none;
   /* make btn look clickable */
   cursor: pointer;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 600;
   padding: 2rem;
   text-transform: uppercase;
@@ -217,6 +217,12 @@ a {
   display: inline-block;
   text-align: center;
   /* and we did box-sizing for all */
+}
+.button--icon {
+  width: 2rem;
+  height: 2rem;
+  vertical-align: middle;
+  margin-right: 1rem;
 }
 
 /* button skins */
@@ -281,24 +287,28 @@ a {
 ::placeholder {
   color: var(--color-body);
   text-transform: capitalize;
+  font-size: 1.7rem;
+  /* margin-left: 2rem ; */
 }
 
 .input-group {
-  border: 2px solid var(--border-color);
+  /* border: 1px solid var(--border-color); */
   border-radius: var(--border-radius);
   display: flex;
-  box-shadow: 0 0 10px 10px var(--border-color);
+  align-items: center;
+  justify-items: center;
+  margin: 4rem 0;
+  padding: 4px;
+  min-width: 350px;
 }
 .input-group .input {
   border: 0;
-  padding: 2rem 2rem;
+  padding: 1rem 3rem;
   flex-grow: 1;
 }
 .input-group .button {
-  margin: 4px;
-}
-.input-group .icon-container {
-  margin: 4px;
+  padding: 2rem 3rem;
+  align-items: center;
 }
 
 /* CARDS */
@@ -745,4 +755,37 @@ a {
   }
 }
 
-/*  */
+/* DOMAIN BLOCK */
+.block-domain .input-group {
+  box-shadow: 0 0 20px 20px #e6ebee;
+  max-width: 670px;
+  /* justify-items: center;| its actually centered, but not outside its div (margin level) */
+  margin: 4rem auto;
+}
+.block-domain .domain__badges {
+  max-width: 700px;
+  /* justify-items: center;| its actually centered, but not outside its div (margin level) */
+  margin: 4rem auto;
+}
+.block-domain .grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+}
+.block-domain .list__item {
+  margin: 1rem 1.5rem;
+  /* font-weight: 600; */
+}
+.block-domain .list__item:hover {
+  /* needs javascript to add class on hover "badge" */
+}
+
+@media screen and (min-width: 1024px) {
+  .block-domain .grid {
+    /* min= 100px sets min by default , max=1fr then after 100px set 1fr sees remaining space */
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+  .block-domain .list__item {
+    margin: 0 2rem;
+  }
+}
