@@ -41,6 +41,7 @@ h3 {
   /* margin is 20px, but font adds some margin so 1rem is better here */
   margin-bottom: 1rem;
   line-height: 1.1;
+  text-transform: capitalize;
 }
 
 h1 {
@@ -438,8 +439,8 @@ a {
 .media__body .media__title {
   text-transform: capitalize;
   /* bottom was 0.5rem */
-  margin: 0 0 0rem 0;
-  font-size: 2.5rem;
+  margin: 0 0 1rem 0;
+  /* font-size: 2.5rem; */
 }
 .media__body .media__text {
   margin-top: 0;
@@ -628,7 +629,7 @@ a {
   text-align: center;
 }
 .block__heading {
-  margin: 1rem 0;
+  margin: 1rem 0 2rem;
 }
 .container {
   max-width: 1140px;
@@ -813,4 +814,33 @@ a {
   margin: 0 auto;
 }
 
-/*  */
+/* FEATURES BLOCK */
+
+.block-features .grid {
+  gap: 6rem;
+  margin-bottom: 10rem;
+}
+.block-features .block__header {
+  margin-bottom: 10rem;
+}
+.block-features .media {
+  display: flex;
+  flex-direction: column;
+}
+.block-features .media__body {
+  margin-left: 0;
+}
+.block-features__image-container {
+  align-content: center;
+}
+.block-features__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .feature__image-left {
+    display: flex;
+    flex-direction: row-reverse;
+    /* order: 2; | use this with schudo selector nth-of-type(even)*/
+  }
+}
