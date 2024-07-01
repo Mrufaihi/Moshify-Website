@@ -1,0 +1,101 @@
+<section class="block container block-features">
+  <!-- header -->
+  <header class="block__header">
+    <h2 class="block__heading">host on the cloud never easier</h2>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, labore?
+    </p>
+  </header>
+
+  <!-- feature 1   better naming = <div class="grid grid--1x2 feature"> -->
+  <!-- media -->
+  <div class="grid grid--1x2">
+    <div class="media">
+      <div class="media__image icon-container">
+        <svg class="icon icon--primary">
+          <use xlink:href="images/sprite.svg#menu"></use>
+        </svg>
+      </div>
+      <div class="media__body">
+        <h3 class="media__title">easy start & managed updates</h3>
+        <p class="media__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste enim
+          totam corrupti dolorum veniam illo mollitia repellendus sapiente
+          molestiae dicta.
+        </p>
+      </div>
+      <!-- link -->
+      <a href="#" class="link-arrow">Learn more</a>
+    </div>
+    <!-- image -->
+    <div class="block-features__image-container">
+      <!-- MISTAKE: images/fast@1x.webp its w:510px (half px of original img),
+            but it shouldve been w:570px since its half of cotainer size(1140px) -->
+      <source
+        type="image/webp"
+        srcset="images/fast@1x.webp 1x, images/fast@2x.webp 2x"
+      />
+      <img class="block-features__image" src="/images/fast.jpg" alt="" />
+    </div>
+  </div>
+
+  <!-- feature 2-->
+  <div class="feature__image-left grid grid--1x2">
+    <!-- media -->
+    <div class="media">
+      <div class="media__image icon-container">
+        <svg class="icon icon--primary">
+          <use xlink:href="images/sprite.svg#snap"></use>
+        </svg>
+      </div>
+      <div class="media__body">
+        <h3 class="media__title">easy start & managed updates</h3>
+        <p class="media__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste enim
+          totam corrupti dolorum veniam illo mollitia repellendus sapiente
+          molestiae dicta.
+        </p>
+      </div>
+      <!-- link -->
+      <a href="#" class="link-arrow">Learn more</a>
+    </div>
+    <!-- image -->
+    <div class="block-features__image-container">
+      <source
+        type="image/webp"
+        srcset="images/support@1x.webp 1x, images/support@2x.webp 2x"
+      />
+      <img class="block-features__image" src="/images/support.jpg" alt="" />
+    </div>
+  </div>
+
+  <!-- feature 3-->
+  <!-- media -->
+  <div class="grid grid--1x2">
+    <div class="media">
+      <div class="media__image icon-container">
+        <svg class="icon icon--primary">
+          <use xlink:href="images/sprite.svg#clock"></use>
+        </svg>
+      </div>
+      <div class="media__body">
+        <h3 class="media__title">easy start & managed updates</h3>
+        <p class="media__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste enim
+          totam corrupti dolorum veniam illo mollitia repellendus sapiente
+          molestiae dicta.
+        </p>
+      </div>
+      <!-- link -->
+      <a href="#" class="link-arrow">Learn more</a>
+    </div>
+    <!-- image -->
+    <div class="block-features__image-container">
+      <source
+        type="image/webp"
+        srcset="images/easy@1x.webp 1x, images/easy@2x.webp 2x"
+      />
+      <img class="block-features__image" src="/images/easy.jpg" alt="" />
+    </div>
+  </div>
+</section>
