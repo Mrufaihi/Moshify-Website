@@ -477,11 +477,11 @@ a {
 .quote__author .media {
   margin: 2rem;
 }
-.quote__author .quote__icon {
+.quote__icon .icon {
   /* margin-top: 0.5rem; alternativly:- */
-  top: -15px;
+  /* top: -15px; */
   position: relative;
-  bottom: 10px;
+  bottom: 20px;
 }
 .quote__author .author-name {
   font-size: 3.5rem;
@@ -639,6 +639,7 @@ a {
 }
 .block__header {
   text-align: center;
+  margin: 0 0 4rem;
 }
 .block__heading {
   margin: 1rem 0 2rem;
