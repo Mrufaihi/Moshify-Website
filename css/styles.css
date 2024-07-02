@@ -145,7 +145,7 @@ a {
 /* start with most general css */
 .list {
   list-style: none;
-  padding-left: 0;
+  /* padding-left: 0; */
   /* color: var(--color-header); | we shouldnt have added skin to structure  
   ,now this will break every list*/
 }
@@ -154,9 +154,8 @@ a {
   margin-right: 1rem;
 }
 .list--tick {
-  /* font-size: 3rem; */
-  /* text-transform: capitalize; */
   list-style-image: url(/images/tick.svg);
+  /* for the icon to appear */
   padding-left: 3rem;
   text-transform: capitalize;
   /* we temporarily gonna put the skin here, but later we will fix the skins */
@@ -180,8 +179,9 @@ a {
   height: 40px;
 }
 .icon--small {
-  width: 30px;
-  height: 30px;
+  --icon--small-width: 20px;
+  width: var(--icon--big-width);
+  height: 20px;
 }
 .icon--big {
   width: 50px;
@@ -199,12 +199,14 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 64px;
-  height: 64px;
+  /* i want it to be changing dynamiclly based on icon size *NOT FIXED**/
+  width: 6rem;
+  height: 6rem;
   border-radius: 100%;
   /* skin here just for default */
-  background-color: #f3f9fa;
+  background-color: whitesmoke;
 }
+
 /* icon-container skins: */
 .icon-container--accent {
   background-color: var(--color-accent);
@@ -593,6 +595,9 @@ a {
 
 /* COLLAPSIBLES */
 
+.collapsible {
+  margin: 0;
+}
 .collapsible__header {
   display: flex;
   justify-content: space-between;
@@ -600,10 +605,11 @@ a {
 }
 .collapsible__heading {
   margin-top: 0;
+  margin-bottom: 2rem;
 }
 /* the defaults */
 .collapsible .icon-container {
-  background: gray;
+  background: #444;
 }
 .collapsible__icon {
   transform: rotate(-90deg);
@@ -626,6 +632,14 @@ a {
   max-height: 100vh;
   /* opacity: 100% */
   transition: max-height 0.5s;
+}
+
+.collapsible__list {
+  margin-top: 0;
+  padding-left: 0rem;
+  opacity: 60%;
+  font-weight: 200;
+  text-transform: capitalize;
 }
 
 /* BLOCKS */
@@ -895,4 +909,69 @@ a {
   }
 }
 
-/*  */
+/* Testimonial block */
+
+/* FOOTER BLOCK */
+
+.block-footer {
+  height: 100%;
+  background-color: #232323;
+}
+.footer__collapsible .collapsible__heading,
+.footer__collapsible .list__item {
+  color: white;
+}
+.block-footer .collapsible {
+  margin: 0 0 3rem 0;
+  padding: 0 0 1rem 0;
+  border-bottom: 1px solid #555;
+}
+.block-footer .icon-container {
+  position: relative;
+  bottom: 10px;
+}
+.footer__collapsible {
+  padding: 0;
+}
+.footer__collapsible .list__item {
+  margin: 0 0 2rem 0;
+}
+.footer__footer {
+  justify-self: center;
+  padding: 0 2rem;
+}
+.copyright {
+  color: white;
+  opacity: 60%;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+/* FOR DESKTOP */
+@media screen and (min-width: 1024px) {
+  .block-footer .grid {
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-flow: dense;
+  }
+  .block-footer .icon-container {
+    display: none;
+  }
+  .block-footer .collapsible {
+    border-bottom: 0;
+    border-right: 1px solid #555;
+    padding-right: 1.5rem;
+  }
+  .block-footer .collapsible__content {
+    max-height: 100vh;
+  }
+  .copyright {
+    font-size: 1.2rem;
+  }
+  .footer__footer {
+    grid-row: 1 / span 2;
+    margin-right: 6rem;
+  }
+  .block-footer .collapsible {
+    margin: 0 2rem;
+  }
+}
