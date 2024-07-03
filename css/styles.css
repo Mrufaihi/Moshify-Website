@@ -158,7 +158,7 @@ a {
   /* for the icon to appear */
   padding-left: 3rem;
   text-transform: capitalize;
-  /* we temporarily gonna put the skin here, but later we will fix the skins */
+  /*TODO: we temporarily gonna put the skin here, but later we will fix the skins */
   color: var(--color-header);
 }
 .list--tick .list__item {
@@ -199,7 +199,7 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  /* i want it to be changing dynamiclly based on icon size *NOT FIXED**/
+  /*TODO: i want it to be changing dynamiclly based on icon size */
   width: 6rem;
   height: 6rem;
   border-radius: 100%;
@@ -512,7 +512,7 @@ a {
   display: grid;
 }
 /* for tabelets */
-/* 900px for tablets looks better on CALLOUT */
+/* TODO: 900px for tablets looks better on CALLOUT */
 @media screen and (min-width: 768px) {
   .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
@@ -606,6 +606,8 @@ a {
 .collapsible__heading {
   margin-top: 0;
   margin-bottom: 2rem;
+  /* structure/skin #rule */
+  color: white;
 }
 /* the defaults */
 .collapsible .icon-container {
@@ -817,7 +819,7 @@ a {
   /* font-weight: 600; */
 }
 .block-domain .list__item:hover {
-  /* needs javascript to add class on hover "badge" */
+  /* TODO: needs javascript to add class on hover "badge" */
 }
 
 @media screen and (min-width: 1024px) {
@@ -909,7 +911,7 @@ a {
   }
 }
 
-/* Testimonial block */
+/* Testimonial block : empty */
 
 /* FOOTER BLOCK */
 
@@ -917,8 +919,11 @@ a {
   height: 100%;
   background-color: #232323;
 }
-.footer__collapsible .collapsible__heading,
-.footer__collapsible .list__item {
+.block-footer a {
+  color: #999;
+  transition: color 0.5s;
+}
+.block-footer a:hover {
   color: white;
 }
 .block-footer .collapsible {
@@ -960,18 +965,29 @@ a {
     border-bottom: 0;
     border-right: 1px solid #555;
     padding-right: 1.5rem;
+    margin-left: 0 0 0 5rem;
   }
   .block-footer .collapsible__content {
     max-height: 100vh;
+  }
+  .block-footer .collapsible__heading {
+    font-size: 2rem;
   }
   .copyright {
     font-size: 1.2rem;
   }
   .footer__footer {
     grid-row: 1 / span 2;
-    margin-right: 6rem;
+    margin-right: 2rem;
+    padding: 0;
+    text-align: start;
   }
   .block-footer .collapsible {
     margin: 0 2rem;
+  }
+  /* TODO: consider refactor for all img 100% */
+  .footer__logo {
+    width: 100%;
+    /* min-width: 15rem; */
   }
 }
