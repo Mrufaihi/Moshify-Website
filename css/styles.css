@@ -34,6 +34,7 @@ body {
   /* 24px body */
   font-size: 2.4rem;
   line-height: 1.5;
+  min-width: 375px;
 }
 
 /* FONTS */
@@ -222,7 +223,8 @@ a {
   cursor: pointer;
   font-size: 1.5rem;
   font-weight: 600;
-  padding: 2rem;
+  /* 4vw for width so whatever the viewport, take %4 of it. */
+  padding: 2rem 4vw;
   text-transform: uppercase;
   /* incase no space in line */
   white-space: nowrap;
@@ -292,39 +294,43 @@ a {
 
 /* standalone input */
 .input {
-  border: 2px solid var(--border-color);
-  padding: 1rem;
-  outline: 0;
-  text-overflow: ellipsis;
   border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  color: var(--color-headings);
+  font-size: 2rem;
+  outline: 0;
+  padding: 1.5rem 3.5rem;
 }
+
 ::placeholder {
-  color: var(--color-body);
-  text-transform: capitalize;
-  font-size: 1.7rem;
-  /* margin-left: 2rem ; */
+  color: #cdcbd7;
 }
 
 .input-group {
-  /* border: 1px solid var(--border-color); */
+  border: 1px solid var(--color-border);
   border-radius: var(--border-radius);
   display: flex;
-  align-items: center;
-  justify-items: center;
-  margin: 4rem 0;
-  padding: 4px;
-  min-width: 350px;
-}
-.input-group .input {
-  border: 0;
-  padding: 1rem 3rem;
-  flex-grow: 1;
-}
-.input-group .button {
-  padding: 2rem 3rem;
-  align-items: center;
+  /* border: 2px solid black; */
 }
 
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+  /* TODO:(DONE). we set width 0 here so flex-grow takes care of it, not default width by chrome. */
+  width: 0;
+  padding: 1.5rem 2rem;
+  /* border: 2px solid red; */
+}
+
+.input-group .button {
+  margin: 4px;
+}
+
+@media screen and (min-width: 1024px) {
+  .input {
+    font-size: 1.5rem;
+  }
+}
 /* CARDS */
 
 .card {
@@ -797,6 +803,7 @@ a {
   }
 }
 
+/* TODO:  PROBLEM WITH LAYOUT*/
 /* DOMAIN BLOCK */
 .block-domain .input-group {
   box-shadow: 0 0 20px 20px #e6ebee;
@@ -804,13 +811,21 @@ a {
   /* justify-items: center;| its actually centered, but not outside its div (margin level) */
   margin: 4rem auto;
 }
-.block-domain .domain__badges {
-  max-width: 700px;
+.block-domain .domain__content {
+  margin: 0 auto;
+}
+
+.block-domain .block-domain__prices {
+  /* max-width: 700px; */
+  max-width: auto;
   /* justify-items: center;| its actually centered, but not outside its div (margin level) */
   margin: 4rem auto;
 }
+.block-domain__prices.list {
+  padding: 0;
+}
 .block-domain .grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   justify-items: center;
 }
@@ -826,6 +841,9 @@ a {
   .block-domain .grid {
     /* min= 100px sets min by default , max=1fr then after 100px set 1fr sees remaining space */
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+  .list.grid {
+    margin: 0 auto;
   }
   .block-domain .list__item {
     margin: 0 2rem;
