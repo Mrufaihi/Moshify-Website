@@ -17,7 +17,7 @@
     />
     <!-- TODO: check url,img later -->
     <meta property="og:url" content="www.moshify.com" />
-    <meta property="og:image" content="/images/logo.svg" />
+    <!-- <meta property="og:image" content="/images/logo.svg" /> -->
     <!-- TITLES -->
     <title>MOSHIFY</title>
     <!-- LINKS -->
@@ -32,13 +32,17 @@
     <link rel="stylesheet" href="css/styles.css" />
     <!-- AOS always Last -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script
+      src="https://kit.fontawesome.com/79ae86e35e.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- nav section -->
     <header>
       <nav class="nav collapsible">
-        <span class="nav__logo">
-          <a href="/"><img src="/images/logo.svg" alt="logo of website" /></a>
+        <span class="nav__logo" data-aos="flip-left" data-aos-duration="1000">
+          <a href="/"><i class="fa-solid fa-code fa-2x logo--accent"></i></a>
         </span>
 
         <svg class="icon nav__toggler icon--white">
@@ -238,7 +242,7 @@
 
       <!-- feature 1 TODO:  better naming = <div class="grid grid-1x2 feature"> -->
       <!-- media -->
-      <div class="grid grid--1x2">
+      <div class="grid grid--1x2 feature">
         <div class="media" data-aos="fade-right" data-aos-duration="1000">
           <div class="media__image icon-container">
             <svg class="icon icon--primary">
@@ -273,13 +277,12 @@
       </div>
 
       <!-- feature 2-->
-      <div class="feature__image-left grid grid--1x2">
+      <div class="grid grid--1x2 feature">
         <!-- media -->
         <div class="media" data-aos="fade-left" data-aos-duration="1000">
           <div class="media__image icon-container">
             <svg class="icon icon--primary">
-              <!-- TODO: #snap  doesnt apply primary color -->
-              <use href="images/sprite.svg#snap"></use>
+              <use href="images/sprite.svg#easy"></use>
             </svg>
           </div>
           <div class="media__body">
@@ -309,7 +312,7 @@
 
       <!-- feature 3-->
       <!-- media -->
-      <div class="grid grid--1x2">
+      <div class="grid grid--1x2 feature">
         <div class="media" data-aos="fade-right" data-aos-duration="1000">
           <div class="media__image icon-container">
             <svg class="icon icon--primary">
@@ -458,7 +461,7 @@
         <div class="card testimonial">
           <div class="grid grid--1x2">
             <div class="testimonial__image">
-              <img src="/images/testimonial.jpg" alt="man smiling" />
+              <img src="/images/unranked-img-croped.webp" alt="man smiling" />
               <span class="icon-container icon-container--accent">
                 <svg class="icon icon--white icon--small">
                   <use href="images/sprite.svg#quotes"></use>
@@ -615,9 +618,9 @@
         </section>
 
         <div class="footer__footer">
-          <a href="footer__logo-link"
-            ><img class="footer__logo" src="/images/logo.svg" alt=""
-          /></a>
+          <a class="footer__logo-container" href="/"
+            ><i class="fa-solid fa-code logo--white fa-4x footer__logo"></i
+          ></a>
           <p class="copyright">CopyRight © 2024 mohammed alrufaihi</p>
         </div>
 

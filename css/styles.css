@@ -194,6 +194,15 @@ a {
 .icon--white {
   fill: white;
 }
+.logo--white {
+  color: white;
+}
+.logo--primary {
+  color: var(--color-primary);
+}
+.logo--accent {
+  color: var(--color-accent);
+}
 .icon-container {
   /* we need inline too, for same line icons and text */
   /* structure with skin here prolly cuz its one time use */
@@ -553,6 +562,11 @@ a {
 .testimonial__image {
   position: relative;
   margin: 0 3rem;
+
+  /* max-width: 920px;
+  max-height: 380px;
+  width: auto;
+  height: auto; */
 }
 .testimonial__image > img {
   width: 100%;
@@ -717,6 +731,10 @@ a {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 0.5rem 2rem;
+}
+.nav__logo {
+  align-self: center;
 }
 .nav__toggler {
   /* margin: 1rem 0; */
@@ -902,10 +920,12 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
-  .feature__image-left {
-    display: flex;
-    flex-direction: row-reverse;
-    /* order: 2; | use this with schudo selector nth-of-type(even)*/
+  /* every even "feature" target its media and swap  */
+  .feature:nth-of-type(even) .media {
+    order: 2;
+    /* display: flex;
+    flex-direction: row-reverse; */
+    /*  | use this with schudo selector nth-of-type(even) */
   }
 }
 
@@ -982,6 +1002,7 @@ a {
 }
 .footer__footer {
   display: flex;
+  gap: 2rem 0;
   flex-direction: column; /* Aligns children (link and paragraph) vertically */
   align-items: center;
 }
@@ -1030,7 +1051,7 @@ a {
   }
   /* TODO: consider refactor for all img 100% */
   .footer__logo {
-    width: 100%;
+    /* width: 100%; */
     /* min-width: 15rem; */
   }
 }
