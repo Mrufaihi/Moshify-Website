@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.5"
   },
   "targets": {
     "main": false
