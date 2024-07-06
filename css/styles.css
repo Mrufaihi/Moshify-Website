@@ -418,6 +418,9 @@ a {
   /* opacity: 50%; */
 }
 /* body */
+.plan .card__body {
+  /* min-height: 30rem; */
+}
 .card__body .list__item {
   /*  using -1rem  */
   margin: 0.5rem -1rem 1.8rem;
@@ -494,6 +497,7 @@ a {
   color: var(--color-body-darker);
   font-style: italic;
   margin: 2rem;
+  text-align: left;
 }
 .quote__text::before {
   content: open-quote;
@@ -553,15 +557,18 @@ a {
 /* Testimonials */
 
 .testimonial {
-  padding: 3rem;
+  padding: 0rem;
+
   /* grid-gap: 4rem; */
 }
 .testimonial .grid {
   grid-gap: 4rem;
+  justify-items: center;
 }
 .testimonial__image {
   position: relative;
-  margin: 0 3rem;
+  margin: 3rem;
+  max-width: 300px;
 
   /* max-width: 920px;
   max-height: 380px;
@@ -570,6 +577,7 @@ a {
 }
 .testimonial__image > img {
   width: 100%;
+  border-radius: 10px;
 }
 .testimonial__image .icon-container {
   /* dont add skins in structure | background-color: #f3732e; */
@@ -737,6 +745,7 @@ a {
 .nav__logo {
   align-self: center;
 }
+
 .nav__toggler {
   /* margin: 1rem 0; */
   align-self: center;
@@ -803,7 +812,9 @@ a {
 }
 
 /* HERO */
-
+.hero.block {
+  padding: var(--padding-vertical) 0;
+}
 .hero__content {
   /* text-align: center; |set at block__header*/
 }
@@ -995,7 +1006,7 @@ a {
   bottom: 10px;
 }
 .footer__collapsible {
-  padding: 0;
+  padding: 1rem 0;
 }
 .footer__collapsible .list__item {
   margin: 0 0 2rem 0;
