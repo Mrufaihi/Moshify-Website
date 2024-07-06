@@ -3,3 +3,4 @@ dist/
 .parcel-cache/
 postcss.config.js
 .cache/
+playground.html

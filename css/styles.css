@@ -694,6 +694,7 @@ a {
   max-width: 1140px;
   /* vertical 0, horizontal auto "middle" */
   margin: 0 auto;
+  overflow-x: hidden;
 }
 /* black block */
 .block--black {
