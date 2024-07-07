@@ -1,3 +1,6 @@
+/* combined css on one file for performance */
+@import "./normalize.css";
+
 /* APPLICATION LEVEL */
 :root {
   /* root vars to set for whole project */

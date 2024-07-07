@@ -28,9 +28,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <!-- AOS always Last -->
+    <!-- AOS always Last (not critical) -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
@@ -38,7 +37,10 @@
     <header>
       <nav class="nav collapsible">
         <span class="nav__logo" data-aos="flip-left" data-aos-duration="1000">
-          <a href="/"><i class="fa-solid fa-code fa-2x logo--accent"></i></a>
+          <!-- aria : is  for acessibility -->
+          <a href="/" aria-label="navbar home page logo"
+            ><i class="fa-solid fa-code fa-2x logo--accent"></i
+          ></a>
         </span>
 
         <svg class="icon nav__toggler icon--white">
@@ -617,14 +619,18 @@
         </section>
 
         <div class="footer__footer">
-          <a class="footer__logo-container" href="/"
+          <a
+            class="footer__logo-container"
+            href="/"
+            aria-label="home page footer logo"
             ><i class="fa-solid fa-code logo--white fa-4x footer__logo"></i
           ></a>
           <p class="copyright">CopyRight © 2024 Unranked</p>
         </div>
       </div>
     </footer>
-    <!-- AOS always after -->
+
+    <!-- js scripts -->
     <script src="/js/main.js"></script>
     <script
       src="https://kit.fontawesome.com/79ae86e35e.js"
